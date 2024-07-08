@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+@font-face {
+  font-family: "jakBold";
+  src: url("./fonts/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "jakItalic";
+  src: url("./fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "jakMedium";
+  src: url("./fonts/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: "jakVariable";
+  src: url("./fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --slate100: hsl(202, 86%, 94%);
+  --slate300: hsl(203, 41%, 72%);
+  --slate500: hsl(200, 26%, 54%);
+  --slate700: hsl(200, 24%, 40%);
+  --slate900: hsl(202, 55%, 16%);
+}
+body,
+input,
+button {
+  font-family: "jakVariable";
+  font-size: 16px;
+}
+.errorField {
+  display: none;
+  color: blue;
+}
+.errorShow .errorField {
+  display: block;
+  color: red;
+  margin-top: 5px;
+}
+.indpSection {
+  display: flex;
+  flex-direction: column;
+}
+.mainHolder {
+  display: flex;
+  padding: 10px;
+}
+.formHolder {
+  flex-basis: 50%;
+}
+.mortgageForm > div {
+  margin-top: 10px;
+}
+.titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--slate700);
+  }
+}
+.mortTitle {
+  font-family: "jakBold";
+  font-size: larger;
+  color: var(--slate900);
+}
+.midsection {
+  display: flex;
+  justify-content: space-between;
+}
+.sectionTitle {
+  color: var(--slate700);
+  margin-bottom: 5px;
+}
+.mortTypeSection div {
+  padding: 5px;
+  border: 1px solid var(--lime);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.mortTypeSection input {
+  accent-color: var(--lime);
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  background-clip: content-box;
+  border: 2px solid var(--lime);
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.mortTypeSection input:checked {
+  background-color: var(--lime);
+}
+.mortTypeSection label {
+  color: var(--slate900);
+  font-family: "jakBold";
+  padding-left: 5px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.calcBtn {
+  background-color: var(--lime);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: "jakBold";
+  border: none;
+  cursor: pointer;
+}
+/* resultCSS */
+.resultHolder {
+  flex-basis: 50%;
+  padding: 10px;
+}
