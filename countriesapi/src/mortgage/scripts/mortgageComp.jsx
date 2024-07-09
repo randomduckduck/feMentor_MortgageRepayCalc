@@ -26,7 +26,7 @@ export default function MortgageComp({ setmonthlyAndYears, setmortType }) {
     res5 = res5 / ((1 + r / 1200) ** (t * 12) - 1);
     console.log(res5);
     // return res5;
-    setmonthlyAndYears([res5, t]);
+    setmonthlyAndYears([res5, t, P]);
   }
   function checkValidity(elems) {
     // let elems = e.target.elements;
@@ -96,18 +96,22 @@ export default function MortgageComp({ setmonthlyAndYears, setmortType }) {
             Clear All
           </button>
         </div>
+        <br />
         <div className="mortAmountSection indpSection ">
           <label className="sectionTitle" htmlFor="mortAmount">
             Mortgage Amount
           </label>
-          <input
-            type="number"
-            id="mortAmount"
-            name="mortAmount"
-            value={mortAmount}
-            onInput={(e) => handleInput(setmortAmount, e)}
-            required
-          ></input>
+          <div className="mortAmountInputHolder">
+            <span className="currencySymbol">$</span>
+            <input
+              type="number"
+              id="mortAmount"
+              name="mortAmount"
+              value={mortAmount}
+              onInput={(e) => handleInput(setmortAmount, e)}
+              required
+            ></input>
+          </div>
           <div className="errorField">This field is required</div>
         </div>
         <div className="midsection">
@@ -115,34 +119,41 @@ export default function MortgageComp({ setmonthlyAndYears, setmortType }) {
             <label className="sectionTitle" htmlFor="mortTerm">
               Mortgage Term
             </label>
-            <input
-              type="number"
-              id="mortTerm"
-              name="mortTerm"
-              value={mortTerm}
-              onInput={(e) => handleInput(setmortTerm, e)}
-              required
-            ></input>
+            <div className="mortTermHolder">
+              <input
+                type="number"
+                id="mortTerm"
+                name="mortTerm"
+                value={mortTerm}
+                onInput={(e) => handleInput(setmortTerm, e)}
+                required
+              ></input>
+              <span className="mortTermText">years</span>
+            </div>
             <div className="errorField">This field is required</div>
           </div>
           <div className="intrateSection indpSection ">
             <label className="sectionTitle" htmlFor="intRate">
               Interest Rate
             </label>
-            <input
-              type="number"
-              id="intRate"
-              name="intRate"
-              value={intRate}
-              onInput={(e) => handleInput(setintRate, e)}
-              required
-            />
+            <div className="intrateHolder">
+              <input
+                type="text"
+                id="intRate"
+                name="intRate"
+                value={intRate}
+                pattern="^\d+(?:\.\d{1,2})?$"
+                onInput={(e) => handleInput(setintRate, e)}
+                required
+              />
+              <span className="intrateText">%</span>
+            </div>
             <div className="errorField">This field is required</div>
           </div>
         </div>
         <div className="mortTypeSection indpSection ">
           <span className="mortTypeTitle sectionTitle">Mortgage Type</span>
-          <div>
+          <div className="mortTypeInputHolder">
             <label htmlFor="mortType-repay">
               <input
                 type="radio"
@@ -155,7 +166,7 @@ export default function MortgageComp({ setmonthlyAndYears, setmortType }) {
               Repayment
             </label>
           </div>
-          <div>
+          <div className="mortTypeInputHolder">
             <label htmlFor="mortType-intOnly">
               <input
                 type="radio"
@@ -171,7 +182,20 @@ export default function MortgageComp({ setmonthlyAndYears, setmortType }) {
           <div className="errorField">This field is required</div>
         </div>
         <div className="calcBtnsection">
+          <br />
           <button className="calcBtn" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#133041"
+                d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"
+              />
+            </svg>
             Calculate repayments
           </button>
         </div>
