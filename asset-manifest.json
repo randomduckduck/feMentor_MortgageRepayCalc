@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/feMentor_MortgageRepayCalc/static/css/main.0229ebf0.css",
+    "main.js": "/feMentor_MortgageRepayCalc/static/js/main.cc8716da.js",
+    "static/media/PlusJakartaSans-Italic-VariableFont_wght.ttf": "/feMentor_MortgageRepayCalc/static/media/PlusJakartaSans-Italic-VariableFont_wght.8eca6f78230e2b1fc1f5.ttf",
+    "static/media/PlusJakartaSans-VariableFont_wght.ttf": "/feMentor_MortgageRepayCalc/static/media/PlusJakartaSans-VariableFont_wght.91a892b057d3b1e6c20b.ttf",
+    "static/media/PlusJakartaSans-Medium.ttf": "/feMentor_MortgageRepayCalc/static/media/PlusJakartaSans-Medium.f78ffc04acb877ce387e.ttf",
+    "static/media/PlusJakartaSans-Bold.ttf": "/feMentor_MortgageRepayCalc/static/media/PlusJakartaSans-Bold.542d4930de15d99be736.ttf",
+    "static/media/logo.svg": "/feMentor_MortgageRepayCalc/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/feMentor_MortgageRepayCalc/index.html",
+    "main.0229ebf0.css.map": "/feMentor_MortgageRepayCalc/static/css/main.0229ebf0.css.map",
+    "main.cc8716da.js.map": "/feMentor_MortgageRepayCalc/static/js/main.cc8716da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0229ebf0.css",
+    "static/js/main.cc8716da.js"
+  ]
+}
